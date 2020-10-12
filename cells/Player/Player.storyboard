@@ -1,59 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E5Y-2U-70D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hyd-zY-MG9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Players-->
+        <!--Basic Player View Controller-->
         <scene sceneID="QtU-8r-rQQ">
             <objects>
-                <viewController title="Players" id="E5Y-2U-70D" customClass="PlayerViewController" customModule="cells" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BasicPlayerViewController" id="E5Y-2U-70D" customClass="BasicPlayerViewController" customModule="cells" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KrJ-7f-HDj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiM-Pn-6Ss" customClass="MediaPla">
-                                <rect key="frame" x="87" y="235" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGf-1D-tNq" customClass="CellsPlayerView" customModule="cells" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="331.5" width="414" height="233"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="233"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zGf-1D-tNq" secondAttribute="height" multiplier="16:9" id="Oto-rP-oQ7"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MCG-oP-VCq">
+                                <rect key="frame" x="8" y="309" width="398" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkP-5i-vlY">
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="80"/>
+                                        <state key="normal" title=" Play" image="play.fill" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPlay:" destination="E5Y-2U-70D" eventType="touchUpInside" id="nak-Xj-a7s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56B-Mc-CCK">
+                                        <rect key="frame" x="199" y="0.0" width="199" height="80"/>
+                                        <state key="normal" title=" Pause" image="pause" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPause:" destination="E5Y-2U-70D" eventType="touchUpInside" id="sSY-yb-qRQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="iEm-DH-qCb"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LzS-Jw-4XF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zGf-1D-tNq" firstAttribute="centerX" secondItem="KrJ-7f-HDj" secondAttribute="centerX" id="1Hc-XT-tdO"/>
+                            <constraint firstItem="MCG-oP-VCq" firstAttribute="centerX" secondItem="KrJ-7f-HDj" secondAttribute="centerX" id="A1T-Oe-4wL"/>
+                            <constraint firstItem="MCG-oP-VCq" firstAttribute="leading" secondItem="LzS-Jw-4XF" secondAttribute="leading" constant="8" id="Htt-4d-oDt"/>
+                            <constraint firstItem="LzS-Jw-4XF" firstAttribute="trailing" secondItem="MCG-oP-VCq" secondAttribute="trailing" constant="8" id="MGp-Cm-U4i"/>
+                            <constraint firstItem="zGf-1D-tNq" firstAttribute="top" secondItem="LzS-Jw-4XF" secondAttribute="top" constant="16" id="OLg-db-Qv5"/>
+                            <constraint firstItem="MCG-oP-VCq" firstAttribute="top" secondItem="zGf-1D-tNq" secondAttribute="bottom" constant="16" id="RcN-dH-KDO"/>
                             <constraint firstItem="zGf-1D-tNq" firstAttribute="leading" secondItem="LzS-Jw-4XF" secondAttribute="leading" id="afD-Qj-ZFi"/>
-                            <constraint firstItem="zGf-1D-tNq" firstAttribute="centerY" secondItem="KrJ-7f-HDj" secondAttribute="centerY" id="kEB-BM-rD3"/>
                             <constraint firstItem="LzS-Jw-4XF" firstAttribute="trailing" secondItem="zGf-1D-tNq" secondAttribute="trailing" id="miA-xI-bhE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player" image="play.rectangle" catalog="system" id="bGo-p7-h4w"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="playerView" destination="zGf-1D-tNq" id="brN-0Z-W4v"/>
+                        <outlet property="playerView" destination="zGf-1D-tNq" id="fQr-e4-Zoy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne3-iE-Zip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="110"/>
+            <point key="canvasLocation" x="884" y="826"/>
+        </scene>
+        <!--Pip Player View Controller-->
+        <scene sceneID="Fo5-z4-xgJ">
+            <objects>
+                <viewController storyboardIdentifier="PipPlayerViewController" id="dtB-4H-Djp" customClass="PipPlayerViewController" customModule="cells" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ly-3c-EHY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsz-bZ-il2" customClass="CellsPlayerView" customModule="cells" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="60" width="414" height="233"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vsz-bZ-il2" secondAttribute="height" multiplier="16:9" id="THU-TY-7vn"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GlB-Y2-Ogs">
+                                <rect key="frame" x="8" y="309" width="398" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrC-Mq-Fvu">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="80"/>
+                                        <state key="normal" title=" Play" image="play.fill" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPlay:" destination="dtB-4H-Djp" eventType="touchUpInside" id="jWF-I9-kZy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd3-zb-qHb">
+                                        <rect key="frame" x="132.5" y="0.0" width="133" height="80"/>
+                                        <state key="normal" title=" Pause" image="pause" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPause:" destination="dtB-4H-Djp" eventType="touchUpInside" id="FJe-cm-ggo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1s-05-APm">
+                                        <rect key="frame" x="265.5" y="0.0" width="132.5" height="80"/>
+                                        <state key="normal" title=" PiP" image="pip.enter" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPip:" destination="dtB-4H-Djp" eventType="touchUpInside" id="mcc-XG-FBB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="WxO-qy-sae"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1z-uO-3Ly">
+                                <rect key="frame" x="186.5" y="421" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HG1-uS-uCU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1z-uO-3Ly" firstAttribute="centerX" secondItem="8ly-3c-EHY" secondAttribute="centerX" id="1GB-xu-c23"/>
+                            <constraint firstItem="GlB-Y2-Ogs" firstAttribute="top" secondItem="vsz-bZ-il2" secondAttribute="bottom" constant="16" id="6QD-Px-gki"/>
+                            <constraint firstItem="HG1-uS-uCU" firstAttribute="trailing" secondItem="GlB-Y2-Ogs" secondAttribute="trailing" constant="8" id="Rac-sD-3yl"/>
+                            <constraint firstItem="GlB-Y2-Ogs" firstAttribute="leading" secondItem="HG1-uS-uCU" secondAttribute="leading" constant="8" id="T8E-MD-0xj"/>
+                            <constraint firstItem="vsz-bZ-il2" firstAttribute="leading" secondItem="HG1-uS-uCU" secondAttribute="leading" id="U7r-ra-jaU"/>
+                            <constraint firstItem="vsz-bZ-il2" firstAttribute="top" secondItem="HG1-uS-uCU" secondAttribute="top" constant="16" id="d3v-sr-zcl"/>
+                            <constraint firstItem="GlB-Y2-Ogs" firstAttribute="centerX" secondItem="8ly-3c-EHY" secondAttribute="centerX" id="e4I-gP-649"/>
+                            <constraint firstItem="Y1z-uO-3Ly" firstAttribute="top" secondItem="GlB-Y2-Ogs" secondAttribute="bottom" constant="32" id="kYA-aV-9D9"/>
+                            <constraint firstItem="HG1-uS-uCU" firstAttribute="trailing" secondItem="vsz-bZ-il2" secondAttribute="trailing" id="tfN-6Q-4te"/>
+                            <constraint firstItem="vsz-bZ-il2" firstAttribute="centerX" secondItem="8ly-3c-EHY" secondAttribute="centerX" id="ujd-zf-mep"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="debugLabel" destination="Y1z-uO-3Ly" id="42i-us-iwf"/>
+                        <outlet property="playerView" destination="vsz-bZ-il2" id="klf-4U-AMz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dL9-Gj-gI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="826"/>
+        </scene>
+        <!--Multi Player View Controller-->
+        <scene sceneID="Vft-aP-39h">
+            <objects>
+                <viewController storyboardIdentifier="MultiPlayerViewController" id="bZx-Nh-xDw" customClass="MultiPlayerViewController" customModule="cells" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zl5-Ts-DzB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLY-5M-IsM" customClass="CellsPlayerView" customModule="cells" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="60" width="414" height="233"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NLY-5M-IsM" secondAttribute="height" multiplier="16:9" id="GrY-oo-dIj"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eap-x7-0Ww">
+                                <rect key="frame" x="8" y="309" width="398" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-tX-NAR">
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="80"/>
+                                        <state key="normal" title=" Play" image="play.fill" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPlay:" destination="bZx-Nh-xDw" eventType="touchUpInside" id="hFJ-9B-1zw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRV-Mf-oaG">
+                                        <rect key="frame" x="199" y="0.0" width="199" height="80"/>
+                                        <state key="normal" title=" Pause" image="pause" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapPause:" destination="bZx-Nh-xDw" eventType="touchUpInside" id="2Rh-jb-OHs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="cvo-0o-LNJ"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBD-JD-ybM" customClass="CellsPlayerView" customModule="cells" customModuleProvider="target">
+                                <rect key="frame" x="16" y="715" width="146" height="82"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Xi2-89-2FK"/>
+                                    <constraint firstAttribute="width" secondItem="pBD-JD-ybM" secondAttribute="height" multiplier="16:9" id="j6g-kC-beA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ex4-WF-TRi" customClass="CellsPlayerView" customModule="cells" customModuleProvider="target">
+                                <rect key="frame" x="241.5" y="596" width="156.5" height="88"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="0Tt-EJ-xfN"/>
+                                    <constraint firstAttribute="width" secondItem="ex4-WF-TRi" secondAttribute="height" multiplier="16:9" id="XDw-EC-Neh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6VY-9w-r5D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6VY-9w-r5D" firstAttribute="trailing" secondItem="NLY-5M-IsM" secondAttribute="trailing" id="05L-B7-dmU"/>
+                            <constraint firstItem="6VY-9w-r5D" firstAttribute="trailing" secondItem="eap-x7-0Ww" secondAttribute="trailing" constant="8" id="DO4-r9-3II"/>
+                            <constraint firstItem="NLY-5M-IsM" firstAttribute="centerX" secondItem="zl5-Ts-DzB" secondAttribute="centerX" id="Dax-gD-0we"/>
+                            <constraint firstItem="6VY-9w-r5D" firstAttribute="bottom" secondItem="pBD-JD-ybM" secondAttribute="bottom" constant="16" id="E9H-WE-BXv"/>
+                            <constraint firstItem="ex4-WF-TRi" firstAttribute="width" secondItem="ex4-WF-TRi" secondAttribute="height" multiplier="16:9" id="Evy-ft-6xL"/>
+                            <constraint firstItem="pBD-JD-ybM" firstAttribute="width" secondItem="pBD-JD-ybM" secondAttribute="height" multiplier="16:9" id="MQm-S5-ZzW"/>
+                            <constraint firstItem="eap-x7-0Ww" firstAttribute="leading" secondItem="6VY-9w-r5D" secondAttribute="leading" constant="8" id="OOk-cW-4id"/>
+                            <constraint firstItem="eap-x7-0Ww" firstAttribute="top" secondItem="NLY-5M-IsM" secondAttribute="bottom" constant="16" id="Wkt-ww-CX7"/>
+                            <constraint firstItem="6VY-9w-r5D" firstAttribute="trailing" secondItem="ex4-WF-TRi" secondAttribute="trailing" constant="16" id="ag5-Qa-gBf"/>
+                            <constraint firstItem="pBD-JD-ybM" firstAttribute="leading" secondItem="6VY-9w-r5D" secondAttribute="leading" constant="16" id="deO-lc-MjL"/>
+                            <constraint firstItem="NLY-5M-IsM" firstAttribute="top" secondItem="6VY-9w-r5D" secondAttribute="top" constant="16" id="e0m-aC-KGN"/>
+                            <constraint firstItem="eap-x7-0Ww" firstAttribute="centerX" secondItem="zl5-Ts-DzB" secondAttribute="centerX" id="eYq-Oi-54E"/>
+                            <constraint firstItem="pBD-JD-ybM" firstAttribute="top" secondItem="ex4-WF-TRi" secondAttribute="bottom" constant="31" id="hVs-wG-DOM"/>
+                            <constraint firstItem="NLY-5M-IsM" firstAttribute="leading" secondItem="6VY-9w-r5D" secondAttribute="leading" id="wGy-kx-lLl"/>
+                            <constraint firstItem="ex4-WF-TRi" firstAttribute="width" secondItem="ex4-WF-TRi" secondAttribute="height" multiplier="16:9" id="xz7-h1-Mqk"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mediPlayerView" destination="ex4-WF-TRi" id="0QG-v4-PPC"/>
+                        <outlet property="miniPlayerView" destination="pBD-JD-ybM" id="EMc-KP-Prd"/>
+                        <outlet property="playerView" destination="NLY-5M-IsM" id="lQU-FB-CKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OA7-uU-FFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2434.7826086956525" y="827.67857142857144"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="CDW-jk-Mqg">
+            <objects>
+                <viewController id="oGA-47-vXo" customClass="ExampleListViewController" customModule="cells" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78D-lH-uj0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vej-Ru-bVS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="63" id="YW9-Y7-H0h" customClass="ExamplePlayerTableViewCell" customModule="cells" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YW9-Y7-H0h" id="MK8-U7-rKn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="846-7g-XLJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vej-Ru-bVS" firstAttribute="top" secondItem="78D-lH-uj0" secondAttribute="top" id="5UN-sa-7xc"/>
+                            <constraint firstItem="Vej-Ru-bVS" firstAttribute="leading" secondItem="846-7g-XLJ" secondAttribute="leading" id="YDf-Iq-FJW"/>
+                            <constraint firstAttribute="bottom" secondItem="Vej-Ru-bVS" secondAttribute="bottom" id="gXw-xR-mNo"/>
+                            <constraint firstItem="846-7g-XLJ" firstAttribute="trailing" secondItem="Vej-Ru-bVS" secondAttribute="trailing" id="xjg-8b-bJK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Player" image="play.rectangle" catalog="system" id="364-Qn-UcK"/>
+                    <navigationItem key="navigationItem" id="ud9-8i-10f"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vej-Ru-bVS" id="pkM-RR-2hq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gjy-3q-jTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xZH-Yw-VgA">
+            <objects>
+                <navigationController id="Hyd-zY-MG9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PVo-dg-8EM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oGA-47-vXo" kind="relationship" relationship="rootViewController" id="L5A-d6-lI0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpg-b0-S3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738" y="827"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pause" catalog="system" width="88" height="128"/>
+        <image name="pip.enter" catalog="system" width="128" height="96"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

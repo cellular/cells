@@ -18,6 +18,11 @@
 		1D2692F32469F2B100BD72D8 /* template_cellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2692F22469F2B100BD72D8 /* template_cellsUITests.swift */; };
 		1D269307246A016C00BD72D8 /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D269306246A016C00BD72D8 /* UIImage+Icons.swift */; };
 		1DFFEBD3246B22D800E410AF /* StartNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFEBD2246B22D800E410AF /* StartNavigationController.swift */; };
+		729530F42531DF2100B70970 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729530F32531DF2100B70970 /* ExampleListViewController.swift */; };
+		729530FC2531E30A00B70970 /* ExamplePlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729530FB2531E30A00B70970 /* ExamplePlayerTableViewCell.swift */; };
+		729531042531F8F800B70970 /* ExamplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729531032531F8F800B70970 /* ExamplePlayer.swift */; };
+		7295310C2531FDE900B70970 /* MultiPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7295310B2531FDE900B70970 /* MultiPlayerViewController.swift */; };
+		729531112531FE0400B70970 /* PipPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729531102531FE0400B70970 /* PipPlayerViewController.swift */; };
 		72AD0B9D253088E200F0D23A /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AD0B9C253088E200F0D23A /* Player.storyboard */; };
 		72AD0BA525308AE500F0D23A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD0BA425308AE500F0D23A /* PlayerViewController.swift */; };
 		72AD0C1125308BE800F0D23A /* MediaPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD0C1025308BE800F0D23A /* MediaPlayerController.swift */; };
@@ -72,6 +77,11 @@
 		1D2693032469FCC600BD72D8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "template-cells/Info.plist"; sourceTree = "<group>"; };
 		1D269306246A016C00BD72D8 /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
 		1DFFEBD2246B22D800E410AF /* StartNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNavigationController.swift; sourceTree = "<group>"; };
+		729530F32531DF2100B70970 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListViewController.swift; sourceTree = "<group>"; };
+		729530FB2531E30A00B70970 /* ExamplePlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePlayerTableViewCell.swift; sourceTree = "<group>"; };
+		729531032531F8F800B70970 /* ExamplePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePlayer.swift; sourceTree = "<group>"; };
+		7295310B2531FDE900B70970 /* MultiPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerViewController.swift; sourceTree = "<group>"; };
+		729531102531FE0400B70970 /* PipPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipPlayerViewController.swift; sourceTree = "<group>"; };
 		72AD0B9C253088E200F0D23A /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		72AD0BA425308AE500F0D23A /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		72AD0C1025308BE800F0D23A /* MediaPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerController.swift; sourceTree = "<group>"; };
@@ -214,6 +224,11 @@
 				72AD0C5C2530942800F0D23A /* CellsMediaAsset.swift */,
 				72AD0C6A253095E200F0D23A /* CellsPlayerView.swift */,
 				72AD0BA425308AE500F0D23A /* PlayerViewController.swift */,
+				7295310B2531FDE900B70970 /* MultiPlayerViewController.swift */,
+				729531102531FE0400B70970 /* PipPlayerViewController.swift */,
+				729531032531F8F800B70970 /* ExamplePlayer.swift */,
+				729530FB2531E30A00B70970 /* ExamplePlayerTableViewCell.swift */,
+				729530F32531DF2100B70970 /* ExampleListViewController.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -399,9 +414,14 @@
 				1D2692D82469F2AE00BD72D8 /* template_cells.xcdatamodeld in Sources */,
 				1D2692CE2469F2AE00BD72D8 /* AppDelegate.swift in Sources */,
 				72AD0C3A25308D0D00F0D23A /* MediaAssetDefaults.swift in Sources */,
+				729531042531F8F800B70970 /* ExamplePlayer.swift in Sources */,
+				729530FC2531E30A00B70970 /* ExamplePlayerTableViewCell.swift in Sources */,
+				729531112531FE0400B70970 /* PipPlayerViewController.swift in Sources */,
 				1D2692D02469F2AE00BD72D8 /* SceneDelegate.swift in Sources */,
 				72AD0C4E253092FB00F0D23A /* MediaPlayerController+Configuration.swift in Sources */,
+				7295310C2531FDE900B70970 /* MultiPlayerViewController.swift in Sources */,
 				72AD0C1625308C1400F0D23A /* MediaPlayerControllerDelegate.swift in Sources */,
+				729530F42531DF2100B70970 /* ExampleListViewController.swift in Sources */,
 				72AD0C2025308C4A00F0D23A /* MediaPlayerState.swift in Sources */,
 				72AD0C2C25308CBF00F0D23A /* CMTime+Convenience.swift in Sources */,
 				72AD0C2725308CA600F0D23A /* AVPlayerItem+Current.swift in Sources */,
@@ -513,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -568,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
