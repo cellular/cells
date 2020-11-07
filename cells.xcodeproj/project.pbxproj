@@ -21,6 +21,18 @@
 		720856872556B87A0005E8B9 /* DiffableDatasourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856862556B87A0005E8B9 /* DiffableDatasourceViewController.swift */; };
 		7208568D2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208568B2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift */; };
 		7208568E2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7208568C2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib */; };
+		720856952556C7910005E8B9 /* TableViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856932556C7910005E8B9 /* TableViewDataSourceDelegate.swift */; };
+		720856962556C7910005E8B9 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856942556C7910005E8B9 /* TableViewDataSource.swift */; };
+		7208569B2556C7A40005E8B9 /* ModelSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208569A2556C7A40005E8B9 /* ModelSection.swift */; };
+		720856A02556C7AB0005E8B9 /* ModelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208569F2556C7AB0005E8B9 /* ModelCollection.swift */; };
+		720856A52556C7B90005E8B9 /* ModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856A42556C7B90005E8B9 /* ModelItem.swift */; };
+		720856AB2556C7CB0005E8B9 /* ModelDataSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856A92556C7CB0005E8B9 /* ModelDataSourceView.swift */; };
+		720856AC2556C7CB0005E8B9 /* TableView+ModelDataSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856AA2556C7CB0005E8B9 /* TableView+ModelDataSourceView.swift */; };
+		720856B12556C7D80005E8B9 /* ModelDataSourceViewDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856B02556C7D80005E8B9 /* ModelDataSourceViewDisplayable.swift */; };
+		720856B62556C7E20005E8B9 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856B52556C7E20005E8B9 /* Source.swift */; };
+		720856BB2556C7F20005E8B9 /* ModelDecorative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856BA2556C7F20005E8B9 /* ModelDecorative.swift */; };
+		720856C02556C8190005E8B9 /* ModelDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856BF2556C8190005E8B9 /* ModelDataSourceViewController.swift */; };
+		720856C62556C8610005E8B9 /* ModelDataSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856C52556C8610005E8B9 /* ModelDataSourceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +73,18 @@
 		720856862556B87A0005E8B9 /* DiffableDatasourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDatasourceViewController.swift; sourceTree = "<group>"; };
 		7208568B2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeispielInhaltTableViewCell.swift; sourceTree = "<group>"; };
 		7208568C2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeispielInhaltTableViewCell.xib; sourceTree = "<group>"; };
+		720856932556C7910005E8B9 /* TableViewDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceDelegate.swift; sourceTree = "<group>"; };
+		720856942556C7910005E8B9 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		7208569A2556C7A40005E8B9 /* ModelSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSection.swift; sourceTree = "<group>"; };
+		7208569F2556C7AB0005E8B9 /* ModelCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCollection.swift; sourceTree = "<group>"; };
+		720856A42556C7B90005E8B9 /* ModelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelItem.swift; sourceTree = "<group>"; };
+		720856A92556C7CB0005E8B9 /* ModelDataSourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataSourceView.swift; sourceTree = "<group>"; };
+		720856AA2556C7CB0005E8B9 /* TableView+ModelDataSourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+ModelDataSourceView.swift"; sourceTree = "<group>"; };
+		720856B02556C7D80005E8B9 /* ModelDataSourceViewDisplayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataSourceViewDisplayable.swift; sourceTree = "<group>"; };
+		720856B52556C7E20005E8B9 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		720856BA2556C7F20005E8B9 /* ModelDecorative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDecorative.swift; sourceTree = "<group>"; };
+		720856BF2556C8190005E8B9 /* ModelDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSourceViewController.swift; sourceTree = "<group>"; };
+		720856C52556C8610005E8B9 /* ModelDataSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSourceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,11 +205,39 @@
 		720856852556B7A00005E8B9 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				720856922556C7800005E8B9 /* ModelDataSource */,
 				720856862556B87A0005E8B9 /* DiffableDatasourceViewController.swift */,
 				7208568B2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift */,
 				7208568C2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		720856922556C7800005E8B9 /* ModelDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				720856BF2556C8190005E8B9 /* ModelDataSourceViewController.swift */,
+				720856C52556C8610005E8B9 /* ModelDataSourceTableViewCell.swift */,
+				720856C42556C8220005E8B9 /* Framework */,
+			);
+			path = ModelDataSource;
+			sourceTree = "<group>";
+		};
+		720856C42556C8220005E8B9 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				720856A92556C7CB0005E8B9 /* ModelDataSourceView.swift */,
+				720856AA2556C7CB0005E8B9 /* TableView+ModelDataSourceView.swift */,
+				720856A42556C7B90005E8B9 /* ModelItem.swift */,
+				7208569F2556C7AB0005E8B9 /* ModelCollection.swift */,
+				720856BA2556C7F20005E8B9 /* ModelDecorative.swift */,
+				7208569A2556C7A40005E8B9 /* ModelSection.swift */,
+				720856B52556C7E20005E8B9 /* Source.swift */,
+				720856B02556C7D80005E8B9 /* ModelDataSourceViewDisplayable.swift */,
+				720856942556C7910005E8B9 /* TableViewDataSource.swift */,
+				720856932556C7910005E8B9 /* TableViewDataSourceDelegate.swift */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,11 +372,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720856B12556C7D80005E8B9 /* ModelDataSourceViewDisplayable.swift in Sources */,
+				720856AC2556C7CB0005E8B9 /* TableView+ModelDataSourceView.swift in Sources */,
+				720856C02556C8190005E8B9 /* ModelDataSourceViewController.swift in Sources */,
+				7208569B2556C7A40005E8B9 /* ModelSection.swift in Sources */,
+				720856BB2556C7F20005E8B9 /* ModelDecorative.swift in Sources */,
 				720856872556B87A0005E8B9 /* DiffableDatasourceViewController.swift in Sources */,
 				1D2692D22469F2AE00BD72D8 /* StartViewController.swift in Sources */,
+				720856952556C7910005E8B9 /* TableViewDataSourceDelegate.swift in Sources */,
+				720856C62556C8610005E8B9 /* ModelDataSourceTableViewCell.swift in Sources */,
 				1DFFEBD3246B22D800E410AF /* StartNavigationController.swift in Sources */,
+				720856B62556C7E20005E8B9 /* Source.swift in Sources */,
+				720856AB2556C7CB0005E8B9 /* ModelDataSourceView.swift in Sources */,
+				720856A02556C7AB0005E8B9 /* ModelCollection.swift in Sources */,
 				1D269307246A016C00BD72D8 /* UIImage+Icons.swift in Sources */,
 				7208568D2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift in Sources */,
+				720856A52556C7B90005E8B9 /* ModelItem.swift in Sources */,
+				720856962556C7910005E8B9 /* TableViewDataSource.swift in Sources */,
 				1D2692D82469F2AE00BD72D8 /* template_cells.xcdatamodeld in Sources */,
 				1D2692CE2469F2AE00BD72D8 /* AppDelegate.swift in Sources */,
 				1D2692D02469F2AE00BD72D8 /* SceneDelegate.swift in Sources */,

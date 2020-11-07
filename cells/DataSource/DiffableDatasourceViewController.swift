@@ -89,6 +89,12 @@ class DiffableDatasourceViewController: UIViewController {
 		datasource.apply(snapshot)
 	}
 	
+	
+	
+	
+	
+	
+	// MARK: UI
 	var isShowingInitialContent = true
 	@IBAction func didTapToggleModelButton(_ sender: Any) {
 		if isShowingInitialContent {
