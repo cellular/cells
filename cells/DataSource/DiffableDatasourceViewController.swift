@@ -14,16 +14,11 @@ struct Inhalt: Hashable {
 	let beschreibung: String
 }
 
-let testInhalt: [Inhalt] = [
-	.init(bild: UIImage(systemName: "leaf.fill"), beschreibung: "Blatt"),
-	.init(bild: UIImage(systemName: "moon.circle.fill"), beschreibung: "Mond"),
-	.init(bild: UIImage(systemName: "airplane.circle.fill"), beschreibung: "Flugzeug"),
-	.init(bild: UIImage(systemName: "sun.max.fill"), beschreibung: "Sonne"),
-]
-
 class DiffableDatasourceViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
+	
+	// UITableViewDiffableDataSource is available since iOS 13.0
 	lazy var datasource: UITableViewDiffableDataSource<Abschnitt, Inhalt> = makeDataSource()
 	
 	
@@ -57,8 +52,14 @@ class DiffableDatasourceViewController: UIViewController {
 	}
 	
 	
+	// MARK: Content Setup
+	let testInhalt: [Inhalt] = [
+		.init(bild: UIImage(systemName: "leaf.fill"), beschreibung: "Blatt"),
+		.init(bild: UIImage(systemName: "moon.circle.fill"), beschreibung: "Mond"),
+		.init(bild: UIImage(systemName: "airplane.circle.fill"), beschreibung: "Flugzeug"),
+		.init(bild: UIImage(systemName: "sun.max.fill"), beschreibung: "Sonne"),
+	]
 	
-	// MARK: Content
 	private func fillWithContent() {
 		var snapshot = NSDiffableDataSourceSnapshot<Abschnitt, Inhalt>()
 		snapshot.appendSections([.eins])
@@ -66,4 +67,36 @@ class DiffableDatasourceViewController: UIViewController {
 		
 		datasource.apply(snapshot)
 	}
+	
+	
+	
+	
+	
+	// MARK: Content Update
+	let updatedInhalt: [Inhalt] = [
+		.init(bild: UIImage(systemName: "sun.max.fill"), beschreibung: "Sonne"), // moved item
+		.init(bild: UIImage(systemName: "leaf.fill"), beschreibung: "Blatt"),
+		.init(bild: UIImage(systemName: "moon.circle.fill"), beschreibung: "Mond"),
+		.init(bild: UIImage(systemName: "star.fill"), beschreibung: "Stern") // new item
+		// "Flugzeug" was removed
+	]
+	
+	private func fillWithUpdatedContent() {
+		var snapshot = NSDiffableDataSourceSnapshot<Abschnitt, Inhalt>()
+		snapshot.appendSections([.eins])
+		snapshot.appendItems(updatedInhalt)
+		
+		datasource.apply(snapshot)
+	}
+	
+	var isShowingInitialContent = true
+	@IBAction func didTapToggleModelButton(_ sender: Any) {
+		if isShowingInitialContent {
+			fillWithUpdatedContent()
+		} else {
+			fillWithContent()
+		}
+		isShowingInitialContent.toggle()
+	}
+	
 }

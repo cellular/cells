@@ -69,17 +69,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EHm-8L-dD3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yt4-G2-hyq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="yIj-cn-IJd"/>
+                                </constraints>
+                                <state key="normal" title="ToggleModel"/>
+                                <connections>
+                                    <action selector="didTapToggleModelButton:" destination="Gbi-d9-A55" eventType="touchUpInside" id="gU3-Mw-E7X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WRR-2T-nXF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="EHm-8L-dD3" secondAttribute="bottom" id="4KH-WA-GFE"/>
+                            <constraint firstItem="EHm-8L-dD3" firstAttribute="top" secondItem="Yt4-G2-hyq" secondAttribute="bottom" id="GUx-MD-Qnw"/>
+                            <constraint firstItem="Yt4-G2-hyq" firstAttribute="leading" secondItem="WRR-2T-nXF" secondAttribute="leading" id="MPS-0v-XSf"/>
                             <constraint firstItem="EHm-8L-dD3" firstAttribute="leading" secondItem="WRR-2T-nXF" secondAttribute="leading" id="PJT-P1-B1e"/>
-                            <constraint firstItem="EHm-8L-dD3" firstAttribute="top" secondItem="WRR-2T-nXF" secondAttribute="top" id="StO-jd-Fqt"/>
+                            <constraint firstItem="Yt4-G2-hyq" firstAttribute="top" secondItem="WRR-2T-nXF" secondAttribute="top" id="SKX-tq-73T"/>
                             <constraint firstItem="WRR-2T-nXF" firstAttribute="trailing" secondItem="EHm-8L-dD3" secondAttribute="trailing" id="a5A-mh-YYa"/>
+                            <constraint firstItem="WRR-2T-nXF" firstAttribute="trailing" secondItem="Yt4-G2-hyq" secondAttribute="trailing" id="qUD-wW-2vg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="DataSources" image="tray.full" catalog="system" id="13R-2u-FTT"/>
@@ -89,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ht-MO-JhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="218"/>
+            <point key="canvasLocation" x="1153.6231884057972" y="217.63392857142856"/>
         </scene>
         <!--Cellular-->
         <scene sceneID="3He-I1-0xf">
