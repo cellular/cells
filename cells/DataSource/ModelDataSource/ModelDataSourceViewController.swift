@@ -2,11 +2,12 @@
 
 import UIKit
 
-class ModelDataSourceViewController: UIViewController {
+/// Example usage of ModelDataSource
+final class ModelDataSourceViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
 	
-	private var dataSource: TableViewDataSource = TableViewDataSource()
+	lazy var dataSource: TableViewDataSource = makeDataSource()
 
 	
     override func viewDidLoad() {
@@ -28,6 +29,22 @@ class ModelDataSourceViewController: UIViewController {
 		tableView?.register(ModelDataSourceTableViewCell.self)
 	}
 
+	private func makeDataSource() -> TableViewDataSource {
+		return .init()
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	// MARK: Content Setup
 	let testInhalt: [Inhalt] = [

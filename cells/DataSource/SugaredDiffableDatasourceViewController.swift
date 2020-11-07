@@ -2,20 +2,8 @@
 
 import UIKit
 
-// 'SectionIdentifierType: Hashable'
-enum Abschnitt: Hashable {
-	case eins
-	case zwei
-}
-
-// 'ItemIdentifierType: Hashable'
-struct Inhalt: Hashable {
-	let bild: UIImage?
-	let beschreibung: String
-}
-
-/// Example usage of UITableViewDiffableDataSource
-final class DiffableDatasourceViewController: UIViewController {
+/// Example usage of UITableViewDiffableDataSource with syntactic sugar
+final class SugaredDiffableDatasourceViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -24,9 +12,9 @@ final class DiffableDatasourceViewController: UIViewController {
 	
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
-        setupTableView()
-    }
+		super.viewDidLoad()
+		setupTableView()
+	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
@@ -37,21 +25,23 @@ final class DiffableDatasourceViewController: UIViewController {
 	
 	// MARK: Setup
 	private func setupTableView() {
-		tableView.register(UINib(nibName: "BeispielInhaltTableViewCell", bundle: nil), forCellReuseIdentifier: "zelle")
 		tableView.dataSource = datasource
+		tableView.register(BeispielInhaltTableViewCell.self)
 	}
 	
 	private func makeDataSource() -> UITableViewDiffableDataSource<Abschnitt, Inhalt> {
 		return UITableViewDiffableDataSource(tableView: tableView) { (tableView, indexPath, inhaltItem) -> UITableViewCell? in
-			/// similar to cellForItemAtIndexPath: we have `tableView` and `indexPath`
-			let cell = tableView.dequeueReusableCell(withIdentifier: "zelle", for: indexPath) as? BeispielInhaltTableViewCell
-			
-			/// nice: we have direct reference to `inhaltItem`
-			cell?.model = inhaltItem
-			
-			return cell
+			return tableView.makeModelCell(BeispielInhaltTableViewCell.self, indexPath: indexPath, model: inhaltItem)
 		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	// MARK: Content Setup
@@ -69,9 +59,6 @@ final class DiffableDatasourceViewController: UIViewController {
 		
 		datasource.apply(snapshot)
 	}
-	
-	
-	
 	
 	
 	

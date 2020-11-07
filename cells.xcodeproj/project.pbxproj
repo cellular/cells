@@ -33,6 +33,8 @@
 		720856BB2556C7F20005E8B9 /* ModelDecorative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856BA2556C7F20005E8B9 /* ModelDecorative.swift */; };
 		720856C02556C8190005E8B9 /* ModelDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856BF2556C8190005E8B9 /* ModelDataSourceViewController.swift */; };
 		720856C62556C8610005E8B9 /* ModelDataSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856C52556C8610005E8B9 /* ModelDataSourceTableViewCell.swift */; };
+		720856CE2556CB7A0005E8B9 /* SugaredDiffableDatasourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856CD2556CB7A0005E8B9 /* SugaredDiffableDatasourceViewController.swift */; };
+		720856D32556D0900005E8B9 /* UITableViewCell+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856D22556D0900005E8B9 /* UITableViewCell+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		720856BA2556C7F20005E8B9 /* ModelDecorative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDecorative.swift; sourceTree = "<group>"; };
 		720856BF2556C8190005E8B9 /* ModelDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSourceViewController.swift; sourceTree = "<group>"; };
 		720856C52556C8610005E8B9 /* ModelDataSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataSourceTableViewCell.swift; sourceTree = "<group>"; };
+		720856CD2556CB7A0005E8B9 /* SugaredDiffableDatasourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugaredDiffableDatasourceViewController.swift; sourceTree = "<group>"; };
+		720856D22556D0900005E8B9 /* UITableViewCell+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 			children = (
 				720856922556C7800005E8B9 /* ModelDataSource */,
 				720856862556B87A0005E8B9 /* DiffableDatasourceViewController.swift */,
+				720856CD2556CB7A0005E8B9 /* SugaredDiffableDatasourceViewController.swift */,
+				720856D22556D0900005E8B9 /* UITableViewCell+Sugar.swift */,
 				7208568B2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift */,
 				7208568C2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib */,
 			);
@@ -378,6 +384,7 @@
 				7208569B2556C7A40005E8B9 /* ModelSection.swift in Sources */,
 				720856BB2556C7F20005E8B9 /* ModelDecorative.swift in Sources */,
 				720856872556B87A0005E8B9 /* DiffableDatasourceViewController.swift in Sources */,
+				720856D32556D0900005E8B9 /* UITableViewCell+Sugar.swift in Sources */,
 				1D2692D22469F2AE00BD72D8 /* StartViewController.swift in Sources */,
 				720856952556C7910005E8B9 /* TableViewDataSourceDelegate.swift in Sources */,
 				720856C62556C8610005E8B9 /* ModelDataSourceTableViewCell.swift in Sources */,
@@ -385,6 +392,7 @@
 				720856B62556C7E20005E8B9 /* Source.swift in Sources */,
 				720856AB2556C7CB0005E8B9 /* ModelDataSourceView.swift in Sources */,
 				720856A02556C7AB0005E8B9 /* ModelCollection.swift in Sources */,
+				720856CE2556CB7A0005E8B9 /* SugaredDiffableDatasourceViewController.swift in Sources */,
 				1D269307246A016C00BD72D8 /* UIImage+Icons.swift in Sources */,
 				7208568D2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift in Sources */,
 				720856A52556C7B90005E8B9 /* ModelItem.swift in Sources */,

@@ -2,17 +2,19 @@
 
 import UIKit
 
-class BeispielInhaltTableViewCell: UITableViewCell {
+final class BeispielInhaltTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var bildSicht: UIImageView!
 	@IBOutlet weak var etikett: UILabel!
 	
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+	var model: Inhalt? {
+		didSet {
+			bildSicht.image = model?.bild?.withRenderingMode(.alwaysOriginal)
+			etikett.text = model?.beschreibung
+		}
+	}
 	
-	func updateForContent(inhalt: Inhalt) {
-		bildSicht.image = inhalt.bild?.withRenderingMode(.alwaysOriginal)
-		etikett.text = inhalt.beschreibung
+	override func awakeFromNib() {
+		super.awakeFromNib()
 	}
 }
