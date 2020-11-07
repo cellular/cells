@@ -18,6 +18,9 @@
 		1D2692F32469F2B100BD72D8 /* template_cellsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2692F22469F2B100BD72D8 /* template_cellsUITests.swift */; };
 		1D269307246A016C00BD72D8 /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D269306246A016C00BD72D8 /* UIImage+Icons.swift */; };
 		1DFFEBD3246B22D800E410AF /* StartNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFFEBD2246B22D800E410AF /* StartNavigationController.swift */; };
+		720856872556B87A0005E8B9 /* DiffableDatasourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720856862556B87A0005E8B9 /* DiffableDatasourceViewController.swift */; };
+		7208568D2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208568B2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift */; };
+		7208568E2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7208568C2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		1D2693032469FCC600BD72D8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "template-cells/Info.plist"; sourceTree = "<group>"; };
 		1D269306246A016C00BD72D8 /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
 		1DFFEBD2246B22D800E410AF /* StartNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNavigationController.swift; sourceTree = "<group>"; };
+		720856862556B87A0005E8B9 /* DiffableDatasourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDatasourceViewController.swift; sourceTree = "<group>"; };
+		7208568B2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeispielInhaltTableViewCell.swift; sourceTree = "<group>"; };
+		7208568C2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeispielInhaltTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		1D2692CC2469F2AE00BD72D8 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				720856852556B7A00005E8B9 /* DataSource */,
 				1DFFEBD4246B23FA00E410AF /* Storyboards */,
 				1D269305246A015A00BD72D8 /* Extensions */,
 				1D2693012469FB9D00BD72D8 /* Resources */,
@@ -169,6 +176,16 @@
 				1D2692D32469F2AE00BD72D8 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		720856852556B7A00005E8B9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				720856862556B87A0005E8B9 /* DiffableDatasourceViewController.swift */,
+				7208568B2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift */,
+				7208568C2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7208568E2556BCB80005E8B9 /* BeispielInhaltTableViewCell.xib in Resources */,
 				1D2692DD2469F2B000BD72D8 /* LaunchScreen.storyboard in Resources */,
 				1D2692DA2469F2B000BD72D8 /* Assets.xcassets in Resources */,
 				1D2692D52469F2AE00BD72D8 /* Main.storyboard in Resources */,
@@ -302,9 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720856872556B87A0005E8B9 /* DiffableDatasourceViewController.swift in Sources */,
 				1D2692D22469F2AE00BD72D8 /* StartViewController.swift in Sources */,
 				1DFFEBD3246B22D800E410AF /* StartNavigationController.swift in Sources */,
 				1D269307246A016C00BD72D8 /* UIImage+Icons.swift in Sources */,
+				7208568D2556BCB80005E8B9 /* BeispielInhaltTableViewCell.swift in Sources */,
 				1D2692D82469F2AE00BD72D8 /* template_cells.xcdatamodeld in Sources */,
 				1D2692CE2469F2AE00BD72D8 /* AppDelegate.swift in Sources */,
 				1D2692D02469F2AE00BD72D8 /* SceneDelegate.swift in Sources */,
