@@ -13,8 +13,12 @@ final class BeispielInhaltTableViewCell: UITableViewCell {
 			etikett.text = model?.beschreibung
 		}
 	}
-	
-	override func awakeFromNib() {
-		super.awakeFromNib()
+}
+
+
+
+extension BeispielInhaltTableViewCell: SugaredTableViewCell {
+	static var source: CellSource<BeispielInhaltTableViewCell> {
+		return .nib(UINib(nibName: String(describing: BeispielInhaltTableViewCell.self), bundle: nil))
 	}
 }

@@ -14,8 +14,4 @@ final class ModelDataSourceTableViewCell: UITableViewCell, ModelDataSourceViewDi
 			imageView?.image = model?.bild
 		}
 	}
-	
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }

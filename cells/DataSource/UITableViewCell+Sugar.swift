@@ -49,12 +49,6 @@ extension UITableView {
 	}
 }
 
-extension BeispielInhaltTableViewCell: SugaredTableViewCell {
-	static var source: CellSource<BeispielInhaltTableViewCell> {
-		return .nib(UINib(nibName: String(describing: BeispielInhaltTableViewCell.self), bundle: nil))
-	}
-}
-
 // very similar to UICollectionView.CellRegistration (iOS 14)
 extension UITableView {
 	func makeModelCell<C: SugaredTableViewCell>(_ cell: C.Type, indexPath: IndexPath, model: C.Model) -> C? {
